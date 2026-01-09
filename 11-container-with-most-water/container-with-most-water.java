@@ -5,11 +5,12 @@ class Solution {
         int r=n-1;
         int max=0;
         while(l<r){
-            int current=Math.min(height[l],height[r])*(r-l);
-            max=Math.max(current,max);
-            if(height[l]<height[r])l++;
-            else{r--;}
+            int current=Math.min(height[r],height[l])*(r-l);
+            max=Math.max(max,current);
+            if(height[l]<height[r]){l++;}
+            else {r--;}
         }
-        return max;
+
+return max;
     }
 }
